@@ -26,40 +26,20 @@
 
 <body>
 
-    <!-- <button data-component="all-posts" class="badge badge-pill badge-primary">Primary</button>
-    <button data-component="all-posts" class="badge badge-pill badge-secondary">Secondary</button>
-    <button data-component="all-posts" class="badge badge-pill badge-success">Success</button> -->
 
-    <!-- <script>
-        var templateResponse = Handlebars.compile( $("#message-response-template").html());
-                    var contextResponse = {
-                        response: await jresp.results[n1].title,
-                        time: this.getCurrentTime()
-                    };
-    </script> -->
 
-    <!-- <script id="message-response-template" type="text/x-handlebars-template">
-    <li>
-        <div class="message-data">
-            <span class="message-data-name"><i class="fa fa-circle online"></i>Bot</span>
-            <span class="message-data-time">{{time}}, Today</span>
-        </div>
-        <div class="message my-message">
-            {{{response}}}
-        </div>
-    </li> -->
 
     <main role="main">
         <h2>Recommended</h2>
         <ul class="flexgrid columns-news">
-            <li>
+            <li id="newsrow">
                 <a id="firstlink">
                     <span class="grid-number">1</span>
                     <figure>
-                        <img id="firstimg" src="">
+                        <center><img id="firstimg" src=""></center>
                         <figcaption>
                             <p>
-                                neews
+                                news
 
                             </p>
                             <h2 id="first">
@@ -69,144 +49,125 @@
                     </figure>
                 </a>
             </li>
-            <!-- <li>
-                <span class="grid-number">2</span>
-                <span class="ribbon icon"><a href="/fav" title="Favorite - svg icon, no emoji">✩</a></span>
-                <a href="https://dribbble.com/jlantunez">
+            <li id="newsrow">
+                <a id="2link">
+                    <span class="grid-number">2</span>
                     <figure>
-                        <img src="https://source.unsplash.com/mZS7cne5iY0/800x600" alt="Photo of Brooklyn Park">
-                        <figcaption>
-                            <p>Category or Date</p>
-                            <h2>How to Find Nature in the City</h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <span class="ribbon"><a href="/rate" title="Rate">7.2</a></span>
-                <a href="https://dribbble.com/jlantunez">
-                    <figure>
-                        <img src="https://source.unsplash.com/nRAhNSGCpB4/800x600" alt="Photo of a couple">
+                        <center><img id="2img" src=""></center>
                         <figcaption>
                             <p>
-                                Category or Date
+                                news
+
                             </p>
-                            <h2>
-                                10 Things Happy People Do Differently
+                            <h2 id="2first">
+
                             </h2>
                         </figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
-                <span class="ribbon">
-                    <a title="Category" href="/category">Category</a>
-                </span>
-                <a href="https://dribbble.com/jlantunez">
+            <li id="newsrow">
+                <a id="3link">
+                    <span class="grid-number">3</span>
                     <figure>
-                        <img src="https://source.unsplash.com/tUh95ZFdZN4/800x600" alt="Photos of Food">
+                        <center><img id="3img" src=""></center>
                         <figcaption>
                             <p>
-                                Date
+                                news
+
                             </p>
-                            <h2>
-                                Classic Spanish Food and Recipes
+                            <h2 id="3">
+
                             </h2>
                         </figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
-                <a href="https://dribbble.com/jlantunez">
-                    <span class="grid-number">5</span>
+            <li id="newsrow">
+                <a id="4link">
+                    <span class="grid-number">4</span>
                     <figure>
-                        <img src="https://source.unsplash.com/Aa8_X_YgrO4/800x600" alt="Photo of Flat Iron Building">
+                        <center><img id="4img" src=""></center>
                         <figcaption>
                             <p>
-                                Category or Date
+                                news
+
                             </p>
-                            <h2>
-                                12 world famous buildings to inspire you
+                            <h2 id="4">
+
                             </h2>
                         </figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
-                <a href="https://dribbble.com/jlantunez">
-                    <figure>
-                        <img src="https://source.unsplash.com/cMCqPMqeyNI/800x600"
-                            alt="Photo of Avenida Constitución (Seville)">
-                        <figcaption>
-                            <p>
-                                Category or Date
-                            </p>
-                            <h2>
-                                Most Popular Street Photos on Instagram Right Now
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <a href="https://dribbble.com/jlantunez">
-                    <figure>
-                        <img src="https://source.unsplash.com/6UJ-a8983DI/800x600" alt="Photo of a smiling couple">
-                        <figcaption>
-                            <p>
-                                Category or Date
-                            </p>
-                            <h2>
-                                Healthy Eating: Easy Tips for Planning a Healthy Diet
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li>
-                <span class="ribbon">
-                    <a href="/rate" title="Rate">6.8</a>
-                </span>
-                <a href="https://dribbble.com/jlantunez">
-                    <figure>
-                        <img src="https://source.unsplash.com/oU0LEbUxnQU/800x600" alt="Photo of glasses">
-                        <figcaption>
-                            <p>
-                                Category or Date
-                            </p>
-                            <h2>
-                                The Most Iconic Designs of Everyday Objects
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li> -->
         </ul>
 
-        
+        <br>
+        <br>
 
+        <ul class="flexgrid columns-news" id="newscol" style="display: none;">
+
+        </ul>
+        <center>
+            <h5><a id="ab" class=" badge badge-pill badge-light">...View more</a></h5>
+        </center>
 
 
     </main>
 
-    <div class="row" id="posts-container"></div>
 
-
-    </script>
 
 
     <script>
         onload = async function () {
-            let navlinks = $('.navbar-nav .nav-link')
 
-            navlinks.click((ev) => {
+            let m;
+            m = 0;
+            $('#ab').on("click", () => {
+                console.log("viewmore");
+                $("#newscol").attr('style', 'display: inline-blocks');
+                for (let p = m; p < m + 4; p++) {
+                    //looping through each post
 
-                let componentUrl = `/${$(ev.target).attr('data-component')}.html`
-                $('#content').load(componentUrl)
+                    let item = $(`
+                     
+                    
+                    <li>
+                        <a href = "${jresp.results[p].url}">
+                        <span class="grid-number">${p + 5}</span>
+                        <figure>
+                                <center><img src="${jresp.results[p].multimedia[4].url}"></center>
+                            <figcaption>
+                                <p>
+                                news
+
+                                </p>
+                            <h2 >
+                                ${jresp.results[p].title}
+
+                            </h2>
+                            </figcaption>
+                        </figure>
+                        </a>
+                    </li>
+                    
+                `);
+
+
+
+
+
+
+
+                    $("#newscol").append(item);
+                }
+
+                m= m+4;
 
             })
 
-            let jresp;
+
+
 
 
             async function getNews() {
@@ -225,84 +186,68 @@
             let q = Math.random() * 100000;
             let n = jresp.num_results;
             console.log(n);
-            let n1 = Math.ceil(q % n)
-            console.log(jresp);
-            console.log(jresp.results);
+            let n1 = Math.ceil(q % n);
+            let n2 = Math.ceil((Math.random() * 100000) % n);
+            let n3 = Math.ceil((Math.random() * 100000) % n);
+            let n4 = Math.ceil((Math.random() * 100000) % n);
+            // console.log(jresp);
+            // console.log(jresp.results);
+
             var mainContainer = document.getElementById("first");
             mainContainer.innerHTML = jresp.results[n1].title;
-            var mimg = document.getElementById("firstimg");
+            // var mimg = document.getElementById("firstimg");
 
-            console.log(jresp.results[n1].multimedia[0].url);
-            let abc = jresp.results[n1].multimedia[0].url;
+            // console.log(jresp.results[n1].multimedia[0].url);
+            let abc = jresp.results[n1].multimedia[4].url;
             $('#firstimg').attr("src", abc);
             let abd = jresp.results[n1].url;
             $('#firstlink').attr("href", abd);
-            let m;
-            m = 3;
-            
 
+            //for 2nd post
 
-            for (let p = 0; p < m; p++) {
-                //looping through each post
+            var mainContainer2 = document.getElementById("2first");
+            mainContainer2.innerHTML = jresp.results[n2].title;
+            // var mimg = document.getElementById("firstimg");
 
-                let item = $(`
-                    <div class="card border-success mb-3" style="max-width: 180rem ; margin : 40px;" >
-                      <div class="card mb-6 card-1 " style="max-width: 1400px; padding: 20px; ">
-                            <div class="card-body">
-                                ${jresp.results[p].title}</h5>
-                        
-                          
-                          
-                            </div>
-                      </div>
-                    </div>   
-                `);
+            // console.log(jresp.results[n1].multimedia[0].url);
+            let abc2 = jresp.results[n2].multimedia[4].url;
+            $('#2img').attr("src", abc2);
+            let abd2 = jresp.results[n2].url;
+            $('#2link').attr("href", abd2);
 
-                    
+            var mainContainer3 = document.getElementById("3");
+            mainContainer3.innerHTML = jresp.results[n3].title;
+            // var mimg = document.getElementById("firstimg");
 
+            // console.log(jresp.results[n1].multimedia[0].url);
+            let abc3 = jresp.results[n3].multimedia[4].url;
+            $('#3img').attr("src", abc3);
+            let abd3 = jresp.results[n3].url;
+            $('#3link').attr("href", abd3);
 
+            //4th post
 
+            var mainContainer4 = document.getElementById("4");
+            mainContainer4.innerHTML = jresp.results[n4].title;
+            // var mimg = document.getElementById("firstimg");
 
-
-                $("#posts-container").append(item);
-            }
-            
-            $('#viewm').on("click", () => {
-                console.log("viewmore");
-                m = m+3;
-                console.log(m);
-                for (let p = m; p < m+3; p++) {
-                //looping through each post
-
-                let item = $(`
-                    <div class="card border-success mb-3" style="max-width: 180rem ; margin : 40px;" >
-                      <div class="card mb-6 card-1 " style="max-width: 1400px; padding: 20px; ">
-                            <div class="card-body">
-                                ${jresp.results[p].title}</h5>
-                        
-                          
-                          
-                            </div>
-                      </div>
-                    </div>   
-                `);
-
-                    
+            // console.log(jresp.results[n1].multimedia[0].url);
+            let abc4 = jresp.results[n4].multimedia[4].url;
+            $('#4img').attr("src", abc4);
+            let abd4 = jresp.results[n4].url;
+            $('#4link').attr("href", abd4);
 
 
 
 
 
-                $("#posts-container").append(item);
-            }
 
 
-            
-            })
+
 
         }
     </script>
-<center><h5 ><button id="viewm"> <a id="ab" class=" badge badge-pill badge-light">...View more</a></button></h5></center>
+
 
 
 
