@@ -20,127 +20,141 @@
         crossorigin="anonymous"></script>
     <script src="/newsfeed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    
 </head>
 
 
 
 <body>
+    <br>
+    <br>
+    <center><button type="button" class="btn btn-secondary btn-lg">Large button</button><button type="button" class="btn btn-secondary btn-lg">Large button</button><button type="button" class="btn btn-secondary btn-lg">Large button</button><button type="button" class="btn btn-secondary btn-lg">Large button</button></center>
+    
+    
+
+
+    <div>
 
 
 
-
-    <main role="main">
-        <h2>Recommended</h2>
-        <ul class="flexgrid columns-news">
-            <li id="newsrow">
-                <a id="firstlink">
-                    <span class="grid-number">1</span>
-                    <figure>
-                        <center><img id="firstimg" src=""></center>
-                        <figcaption>
-                            <p id="p1">
-                                
-
-                            </p>
-                            <h2 id="first">
-
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li id="newsrow">
-                <a id="2link">
-                    <span class="grid-number">2</span>
-                    <figure>
-                        <center><img id="2img" src=""></center>
-                        <figcaption>
-                            <p id="p2">
-                                
-
-                            </p>
-                            <h2 id="2first">
-
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li id="newsrow">
-                <a id="3link">
-                    <span class="grid-number">3</span>
-                    <figure>
-                        <center><img id="3img" src=""></center>
-                        <figcaption>
-                            <p id="p3">
-                                news
-
-                            </p>
-                            <h2 id="3">
-
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li id="newsrow">
-                <a id="4link">
-                    <span class="grid-number">4</span>
-                    <figure>
-                        <center><img id="4img" src=""></center>
-                        <figcaption>
-                            <p id="p4">
-                                
-
-                            </p>
-                            <h2 id="4">
-
-                            </h2>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-        </ul>
-
-        <br>
-        <br>
-
-        <ul class="flexgrid columns-news" id="newscol" style="display: none;">
-
-        </ul>
-        <center>
-            <h3><a id="ab" class=" badge badge-pill badge-light">...View more</a></h3>
-        </center>
-        <br>
-        <br>
-        <br>
-        <br>
+        <main role="main">
+            <h2>Recommended</h2>
+            <ul class="flexgrid columns-news">
+                <li id="newsrow">
+                    <a id="firstlink">
+                        <span class="grid-number">1</span>
+                        <figure>
+                            <center><img id="firstimg" src=""></center>
+                            <figcaption>
+                                <p id="p1">
 
 
-    </main>
+                                </p>
+                                <h2 id="first">
+
+                                </h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li id="newsrow">
+                    <a id="2link">
+                        <span class="grid-number">2</span>
+                        <figure>
+                            <center><img id="2img" src=""></center>
+                            <figcaption>
+                                <p id="p2">
+
+
+                                </p>
+                                <h2 id="2first">
+
+                                </h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li id="newsrow">
+                    <a id="3link">
+                        <span class="grid-number">3</span>
+                        <figure>
+                            <center><img id="3img" src=""></center>
+                            <figcaption>
+                                <p id="p3">
+                                    news
+
+                                </p>
+                                <h2 id="3">
+
+                                </h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li id="newsrow">
+                    <a id="4link">
+                        <span class="grid-number">4</span>
+                        <figure>
+                            <center><img id="4img" src=""></center>
+                            <figcaption>
+                                <p id="p4">
+
+
+                                </p>
+                                <h2 id="4">
+
+                                </h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+
+            <br>
+            <br>
+
+            <ul class="flexgrid columns-news" id="newscol" style="display: none;">
+
+            </ul>
+            <center>
+                <h3><a id="ab" class=" badge badge-pill badge-light">...View more</a></h3>
+            </center>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        </main>
+    </div>
 
 
 
 
     <script>
         onload = async function () {
+            let count = 0;
 
             let m;
             m = 0;
             $('#ab').on("click", () => {
-                console.log("viewmore");
-                $("#newscol").attr('style', 'display: inline-blocks');
-                for (let p = m; p < m + 4; p++) {
-                    //looping through each post
+                count++;
+                if (count < n / 4) {
+                    n = jresp.num_results;
+                    console.log("viewmore");
+                    console.log(n / 4);
+                    $("#newscol").attr('style', 'display: inline-blocks');
+                    for (let p = m; p < (m + 4) && (p < n - 1); p++) {
+                        //looping through each post
 
-                    let item = $(`
+                        let item = $(`
                      
                     
                     <li>
                         <a href = "${jresp.results[p].url}">
                         <span class="grid-number">${p + 5}</span>
                         <figure>
-                                <center><img src="${jresp.results[p].multimedia[4].url}"></center>
+                                <center><img src="${jresp.results[p].multimedia[0].url}"></center>
                             <figcaption>
                                 <p>
                                 ${jresp.results[p].des_facet[0]}
@@ -155,19 +169,27 @@
                         </a>
                     </li>
                     
-                `);
+                        `);
 
 
 
 
 
+                        if (p > n)
+                            console.log("limit reach")
 
 
-                    $("#newscol").append(item);
+                        if (p < n) {
+                            $("#newscol").append(item);
+                        }
+                    }
+
+
+                    m = m + 4;
                 }
-
-                m= m+4;
-
+                else {
+                    document.getElementById("ab").innerText = "Reached End of News section";
+                }
             })
 
 
@@ -187,28 +209,79 @@
             // var templateResponse = Handlebars.compile($("#message-response-template").html());
             // console.log(templateResponse);
             jresp = await getNews();
+
             let q = Math.random() * 100000;
             let n = jresp.num_results;
             console.log(n);
-            let n1 = Math.ceil(q % n);
-            let n2 = Math.ceil((Math.random() * 100000) % n);
-            let n3 = Math.ceil((Math.random() * 100000) % n);
-            let n4 = Math.ceil((Math.random() * 100000) % n);
+            let n1, n2, n3, n4;
+            function random_generate() {
+                n1 = Math.ceil(q % n)-1;
+                n2 = Math.ceil((Math.random() * 100000) % n)-1;
+                n3 = Math.ceil((Math.random() * 100000) % n)-1;
+                n4 = Math.ceil((Math.random() * 100000) % n)-1;
+                console.log(n1)
+                console.log(n2)
+                console.log(n3)
+                console.log(n4)
+                if ((n1 == n2) || (n1 == n3) || (n1 == n4)) {
+                    console.log("same");
 
-            document.getElementById("p4").innerHTML = jresp.results[n4].des_facet[0];
-            document.getElementById("p3").innerHTML = jresp.results[n3].des_facet[0];
-            document.getElementById("p2").innerHTML = jresp.results[n2].des_facet[0];
-            document.getElementById("p1").innerHTML = jresp.results[n1].des_facet[0];
-            
+                    random_generate();
+
+                }
+                if ((n1 == n2) || (n2 == n3) || (n2 == n4)) {
+                    console.log("same");
+                    random_generate();
+
+                }
+
+                if ((n1 == n2) || (n1 == n3) || (n3 == n4)) {
+                    console.log("same");
+                    random_generate();
+
+                }
+                
+                
+            }
+            random_generate();
+            if (!(jresp.results[n1].des_facet[0]) || !(jresp.results[n2].des_facet[0]) || !(jresp.results[n3].des_facet[0]) || !(jresp.results[n4].des_facet[0])) {
+                console.log("category undefined")
+                document.getElementById("p4").innerHTML = "News";
+                document.getElementById("p3").innerHTML = "News";
+                document.getElementById("p2").innerHTML = "News";
+                document.getElementById("p1").innerHTML = "News";
+            }
+
+            document.getElementById("p4").innerHTML = jresp.results[n4].des_facet[0] || "News";
+            document.getElementById("p3").innerHTML = jresp.results[n3].des_facet[0] || "News";
+            document.getElementById("p2").innerHTML = jresp.results[n2].des_facet[0] || "News";
+            document.getElementById("p1").innerHTML = jresp.results[n1].des_facet[0] || "News";
+
+
+
             // console.log(jresp);
             // console.log(jresp.results);
+            let a1 = 4;
 
             var mainContainer = document.getElementById("first");
             mainContainer.innerHTML = jresp.results[n1].title;
             // var mimg = document.getElementById("firstimg");
 
+            // if (!(jresp.results[n1].multimedia[a1].url) || !(jresp.results[n2].multimedia[a1].url) || !(jresp.results[n3].multimedia[a1].url) || !(jresp.results[n4].multimedia[a1].url)) {
+            //     console.log("media undefined")
+            //     abc = jresp.results[n1].multimedia[0].url;
+            //     abc2 = jresp.results[n2].multimedia[0].url;
+            //     abc3 = jresp.results[n3].multimedia[0].url;
+            //     abc4 = jresp.results[n4].multimedia[0].url;
+
+            // }
+           let abc,abc2,abc3,abc4;
+
             // console.log(jresp.results[n1].multimedia[0].url);
-            let abc = jresp.results[n1].multimedia[4].url;
+            if((jresp.results[n1].multimedia))
+            abc = jresp.results[n1].multimedia[a1].url;
+            else
+            multicheck();
             $('#firstimg').attr("src", abc);
             let abd = jresp.results[n1].url;
             $('#firstlink').attr("href", abd);
@@ -220,7 +293,11 @@
             // var mimg = document.getElementById("firstimg");
 
             // console.log(jresp.results[n1].multimedia[0].url);
-            let abc2 = jresp.results[n2].multimedia[4].url;
+            if((jresp.results[n2].multimedia))
+             abc2 = jresp.results[n2].multimedia[a1].url;
+             else
+            multicheck();
+
             $('#2img').attr("src", abc2);
             let abd2 = jresp.results[n2].url;
             $('#2link').attr("href", abd2);
@@ -230,7 +307,10 @@
             // var mimg = document.getElementById("firstimg");
 
             // console.log(jresp.results[n1].multimedia[0].url);
-            let abc3 = jresp.results[n3].multimedia[4].url;
+            if((jresp.results[n3].multimedia))
+            abc3 = jresp.results[n3].multimedia[a1].url;
+            else
+            multicheck();
             $('#3img').attr("src", abc3);
             let abd3 = jresp.results[n3].url;
             $('#3link').attr("href", abd3);
@@ -242,10 +322,25 @@
             // var mimg = document.getElementById("firstimg");
 
             // console.log(jresp.results[n1].multimedia[0].url);
-            let abc4 = jresp.results[n4].multimedia[4].url;
+            if((jresp.results[n4].multimedia))
+            abc4 = jresp.results[n4].multimedia[a1].url;
+            else
+            multicheck();
             $('#4img').attr("src", abc4);
             let abd4 = jresp.results[n4].url;
             $('#4link').attr("href", abd4);
+
+            function multicheck(){
+            if (!(jresp.results[n1].multimedia) || !(jresp.results[n2].multimedia) || !(jresp.results[n3].multimedia) || !(jresp.results[n4].multimedia)) {
+                console.log("multi-media undefined")
+
+                abc = "https://icons.iconarchive.com/icons/martz90/circle-addon1/512/new-york-times-icon.png";
+                abc2 = "https://icons.iconarchive.com/icons/martz90/circle-addon1/512/new-york-times-icon.png";
+                abc3 = "https://icons.iconarchive.com/icons/martz90/circle-addon1/512/new-york-times-icon.png";
+                abc4 = "https://icons.iconarchive.com/icons/martz90/circle-addon1/512/new-york-times-icon.png";
+
+            }
+        }
 
 
 
