@@ -28,7 +28,7 @@
 <body>
     <br>
     <br>
-    <center><button type="button" class="btn btn-secondary btn-lg">Large button</button><button type="button" class="btn btn-secondary btn-lg">Large button</button><button type="button" class="btn btn-secondary btn-lg">Large button</button><button type="button" class="btn btn-secondary btn-lg">Large button</button></center>
+    <center><button type="button" class="btn btn-secondary btn-lg">Large button</button>&nbsp;&nbsp;<button type="button" class="btn btn-secondary btn-lg">World</button>&nbsp;&nbsp;<button type="button" class="btn btn-secondary btn-lg">Large button</button>&nbsp;&nbsp;<button type="button" class="btn btn-secondary btn-lg">Large button</button></center>
     
     
 
@@ -205,6 +205,14 @@
                 return jsonResp;
             }
             getNews();
+            async function getWorld() {
+
+                const response = await fetch('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=QJqLn6OcDEABCBC11kTCjoOmRCU0Jrma');
+                const jsonResp = await response.json();
+                jresp = jsonResp;
+
+                return jsonResp;
+            }
 
             // var templateResponse = Handlebars.compile($("#message-response-template").html());
             // console.log(templateResponse);
